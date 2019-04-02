@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Elearn</title>
+<link rel="stylesheet" type="text/css" href="/stylesheets/kickstart.css" media="all" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/javascripts/kickstart.js"></script>      
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/css/mdb.min.css" rel="stylesheet">
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="all" />                 
+
+</head>
+<body style="background: linear-gradient(to bottom right, #000, #339);">
+
+<!-- Menu Horizontal -->
+<div >
+	<ul class="menu" style="background: radial-gradient(rgba(157, 186, 232, 0.2), rgba(43, 84, 150, 0.2), rgba(1, 2, 25, 0.2));">
+	<li><a href="/" style="font-size: 20px;">Home</a></li>
+	<li><a href="/classes" style="font-size: 20px;">Classes</a></li>
+	</ul>
+</div>
+<div class="grid">
+<div class="col_12">
+	<div class="col_9">
+		{{#if success_msg}}
+			<div class="notice success"><i class="icon-remove-sign icon-large"></i> {{success_msg}}
+				<a href="#close" class="icon-remove"></a>
+			</div>
+		{{/if}}
+
+		{{#if error_msg}}
+			<div class="notice error"><i class="icon-remove-sign icon-large"></i> {{error_msg}}
+				<a href="#close" class="icon-remove"></a>
+			</div>
+		{{/if}}
+
+		{{#if error}}
+			<div class="notice error"><i class="icon-remove-sign icon-large"></i> {{error}}
+				<a href="#close" class="icon-remove"></a>
+			</div>
+		{{/if}}
+		
+			{{{body}}}
+	
+		
+	</div>
+	<div class="col_3">
+		{{>login}}
+	</div>
+
+</div>
+
+</div><!-- END GRID -->
+
+<!-- ===================================== START FOOTER ===================================== -->
+<div class="clear"></div>
+
+
+</body></html>

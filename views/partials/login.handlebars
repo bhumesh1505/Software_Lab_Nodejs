@@ -1,0 +1,22 @@
+{{#if user}}
+	<div style="position: fixed;">
+		<h5>Welcome Back {{user.username}}</h5>
+		<ul class="alt">
+		<li><a href="/{{type}}s/classes">My Classes</a></li>
+		<li><a href="/users/logout">Logout</a></li>
+		</ul>
+	</div>
+{{else}}
+<div style="padding: 25px;border-radius: 15px;position: fixed;">
+	<h4>Student & Instructor Login</h4>
+	<form method="post" action="/users/login">
+		<label> Username: </label>
+		<input type="text" name="username">
+		<label> Password: </label>
+		<input type="password" name="password">
+		<br>
+		<br>
+		<input type="submit" class="button" value="Login">
+	</form>
+</div>
+{{/if}}

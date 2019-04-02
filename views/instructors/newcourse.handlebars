@@ -1,0 +1,18 @@
+<h2>Add Course</h2>
+<form id="regForm1" method="post" action="/instructors/classes/course">
+
+	<input type="hidden" name="instructor_fname" value="{{instructor.first_name}}">
+	<input type="hidden" name="instructor_lname" value="{{instructor.last_name}}">
+	<div>
+		<label>Course Title: </label>
+		<input type="text" name="course_title">
+	</div><br />
+	<div>
+		<label>Description: </label>
+		<textarea name="description"></textarea>
+	</div><br />
+	
+	<div>
+		<input type="submit" value="Add Course">
+	</div>
+</form>

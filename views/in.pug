@@ -1,0 +1,16 @@
+table(style="width:60%",border=1)  
+    tr
+    th Title
+    th Category
+    th Author
+    th Year
+    th Price
+    th Laguage
+    each book, index in books
+        tr
+        td #{book['title'][0]['_']}
+        td #{book['category'][0]}
+        td #{book['author'][0]}
+        td #{book['year'][0]}
+        td #{book['price'][0]}
+        td #{book['title'][0]['$']['lang']}

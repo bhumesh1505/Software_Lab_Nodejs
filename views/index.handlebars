@@ -1,0 +1,37 @@
+<br>
+<div style="font-size: 35px;font-weight: 1000;text-align: center;">Welcome To VNIT'X Online courses</div>
+	<br>
+	<br>
+	<p>
+	This is a simple and free online learning platform. Instructors can create courses and students can register for courses which include assignments, quizes and support forums.
+	</p>
+	
+	<center>
+		{{#if user}}
+
+		{{else}}
+				<a class="button" href="/users/register" style="font-size: 20px;">Sign Up Free</a>
+		{{/if}}	
+		<a class="button" href="/xml" style="font-size: 20px;">Reference Books</a>
+	</center>
+	
+	<hr />
+	<br>
+	<h3 style="font-size: 25px;font-weight: 1000;text-align: center;">Courses</h3>
+	<br>
+	{{#each classes}}
+
+		<div class="card" style="">
+		  <div class="card-body">
+		    <!-- Title -->
+		    <h4 class="card-title">{{title}}</h4>
+		    <!-- Text -->
+		    <p class="card-text">{{description}}</p>
+		    <!-- Button -->
+		    <a href="/classes/{{_id}}/details" class="btn">View Course</a>
+		  </div>
+		</div>
+		<br>
+		<hr/>
+	{{/each}}
+
