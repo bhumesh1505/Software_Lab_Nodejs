@@ -1,5 +1,5 @@
 {{#if user}}
-	<div style="position: fixed;">
+	<div style="position: fixed; background-color: #f1f1f1;">
 		<h5>Welcome Back {{user.username}}</h5>
 		<ul class="alt">
 		<li><a href="/{{type}}s/classes">My Classes</a></li>
@@ -7,7 +7,7 @@
 		</ul>
 	</div>
 {{else}}
-<div style="padding: 25px;border-radius: 15px;position: fixed;">
+<div style="padding: 25px;border-radius: 15px;position: fixed; background-color: #f1f1f1;">
 	<h4>Student & Instructor Login</h4>
 	<form method="post" action="/users/login">
 		<label> Username: </label>

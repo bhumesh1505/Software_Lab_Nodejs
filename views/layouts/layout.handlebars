@@ -23,20 +23,37 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="all" />                 
+<style type="text/css">
+	ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+	}
 
+	li a {
+	  display: block;
+	  color: #000;
+	  padding: 8px 16px;
+	  text-decoration: none;
+	}
+
+	/* Change the link color on hover */
+	li a:hover {
+	  background-color: #555;
+	  color: white;
+	}
+
+</style>
 </head>
-<body style="background: linear-gradient(to bottom right, #000, #339);">
+<body style="color: black;">
 
-<!-- Menu Horizontal -->
-<div >
-	<ul class="menu" style="background: radial-gradient(rgba(157, 186, 232, 0.2), rgba(43, 84, 150, 0.2), rgba(1, 2, 25, 0.2));">
-	<li><a href="/" style="font-size: 20px;">Home</a></li>
-	<li><a href="/classes" style="font-size: 20px;">Classes</a></li>
-	</ul>
-</div>
-<div class="grid">
 <div class="col_12">
-	<div class="col_9">
+	<div class="col_2">
+		{{>home}}
+	</div>
+	<div class="col_7" style="background-color: #D7E3E6; padding: 20px;">
 		{{#if success_msg}}
 			<div class="notice success"><i class="icon-remove-sign icon-large"></i> {{success_msg}}
 				<a href="#close" class="icon-remove"></a>
@@ -59,13 +76,11 @@
 	
 		
 	</div>
-	<div class="col_3">
+	<div class="col_3" >
 		{{>login}}
 	</div>
 
 </div>
-
-</div><!-- END GRID -->
 
 <!-- ===================================== START FOOTER ===================================== -->
 <div class="clear"></div>

@@ -1,18 +1,20 @@
 <br>
-<div style="font-size: 35px;font-weight: 1000;text-align: center;">Welcome To VNIT'X Online courses</div>
+<div style="background: 095F76">
+<div style="font-size: 35px;font-weight: 1000;text-align: center;">APNA COURSERA</div>
 	<br>
 	<br>
-	<p>
-	This is a simple and free online learning platform. Instructors can create courses and students can register for courses which include assignments, quizes and support forums.
-	</p>
-	
+
 	<center>
+		<p>
+		HELLO FRIENDS
+		</p>
+		
 		{{#if user}}
 
 		{{else}}
 				<a class="button" href="/users/register" style="font-size: 20px;">Sign Up Free</a>
-		{{/if}}	
-		<a class="button" href="/xml" style="font-size: 20px;">Reference Books</a>
+		{{/if}}
+
 	</center>
 	
 	<hr />
@@ -21,17 +23,34 @@
 	<br>
 	{{#each classes}}
 
-		<div class="card" style="">
-		  <div class="card-body">
-		    <!-- Title -->
-		    <h4 class="card-title">{{title}}</h4>
-		    <!-- Text -->
-		    <p class="card-text">{{description}}</p>
-		    <!-- Button -->
-		    <a href="/classes/{{_id}}/details" class="btn">View Course</a>
-		  </div>
+
+
+ 
+		<!-- Card -->
+	    <div class="card gradient-card">
+    		<div class="card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+				<div class="text-white d-flex h-100 mask aqua-gradient-rgba">
+
+						<!-- <div class="card" style="">
+						  <div class="card-body"> -->
+				    <div class="first-content align-self-center p-3">
+	                <h3 class="card-title">{{title}}</h3>
+	                <p class="lead mb-0">{{description}}</p>
+	                <br>
+	              	<a href="/classes/{{_id}}/details" class="btn">View Course</a>
+	              	</div>
+				    <!-- Title -->
+				    <!-- <h4 class="card-title">{{title}}</h4> -->
+				    <!-- Text -->
+				    <!-- <p class="card-text">{{description}}</p> -->
+				    <!-- Button -->
+				    <!-- <a href="/classes/{{_id}}/details" class="btn">View Course</a> -->
+			  	</div>
+			</div>
 		</div>
 		<br>
 		<hr/>
+	
 	{{/each}}
 
+</div>
